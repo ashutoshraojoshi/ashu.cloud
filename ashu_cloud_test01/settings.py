@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-c*b(i(zu9gmq5rhn5v=ljxq+0@_m$(bct^64lfdp27&9ef7c9b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["16.171.122.96","ashu.cloud"]
 
 
 # Application definition
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'ashu_cloud_test01.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME':'test_demo',
         'HOST':'127.0.0.1',
         'PORT':'3306',
