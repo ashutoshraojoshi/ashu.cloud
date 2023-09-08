@@ -4,85 +4,35 @@
 
 {% block content %}
 
-<body>
-
-    <!-- Header Section -->
-    <header class="bg-primary text-white text-center py-5">
-        <h1>Ashu Cloud</h1>
-        <p>Chalo</p>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <h2 class="text-center">About Me</h2>
-            <p>[Your short bio goes here. Explain your passion for coding and your approach to app development.]</p>
-        </div>
-    </section>
-
-    <!-- App Showcase Section -->
-    <section id="app-showcase" class="py-5">
-        <div class="container">
-            <h2 class="text-center">App Showcase</h2>
-
-            <!-- Filtering Options -->
-            <div class="text-center mb-4">
-                <label for="category">Filter by Category:</label>
-                <select id="category" class="custom-select">
-                    <option value="all">All</option>
-                    <option value="social">Social</option>
-                    <option value="productivity">Productivity</option>
-                    <!-- Add more categories as needed -->
-                </select>
-            </div>
-
-            <!-- App Cards (use Bootstrap cards) -->
-            <div class="row">
-                <!-- Repeat the following card structure for each app -->
-                <div class="col-lg-4 col-md-6 mb-4" data-category="social">
-                    <div class="card">
-                        <img src="app1-screenshot.jpg" class="card-img-top" alt="App 1 Screenshot">
-                        <div class="card-body">
-                            <h5 class="card-title">App 1 Name</h5>
-                            <p class="card-text">Description: [Brief description of the app's purpose and features.]</p>
-                            <p class="card-text">Technologies Used: [List of technologies used.]</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="app1-download-link" class="btn btn-primary">Download on App Store</a>
-                        </div>
-                    </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 custom-card">
+            <div class="card">
+                <img src="https://via.placeholder.com/50" class="card-img" alt="Card Image">
+                <div class="overlay">
+                    <h3>ChatBot</h3>
                 </div>
-                <!-- End of app card -->
             </div>
-            
         </div>
-    </section>
+        <div class="col-md-4 custom-card">
+            <div class="card">
+                <img src="https://via.placeholder.com/50" class="card-img" alt="Card Image">
+                <div class="overlay">
+                    <h3>Map URL generator</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 custom-card">
+            <div class="card">
+                <img src="https://via.placeholder.com/50" class="card-img" alt="Card Image">
+                <div class="overlay">
+                    <h3>Trading</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <!-- Case Studies Section (Optional) -->
-    <!-- Repeat the following case study structure for each significant project if needed -->
-    <!-- <section id="case-studies" class="py-5">
-        <div class="container">
-            <h2 class="text-center">Case Studies</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>App 1 Case Study</h3>
-                    <p>[Describe the challenges, solutions, and impact of App 1 here.]</p>
-                </div> -->
-                <!-- End of case study -->
-            <!-- </div>
-        </div>
-    </section> -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="bg-light py-5">
-        <div class="container">
-            <h2 class="text-center">Contact Me</h2>
-            <p>Ready to discuss a project or collaborate? Feel free to reach out!</p>
-            <a href="mailto:youremail@example.com" class="btn btn-primary">Contact Me</a>
-        </div>
-    </section>
 
 {% endblock %}  
 
-</body>
-</html>
