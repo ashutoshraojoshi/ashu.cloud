@@ -1,0 +1,8 @@
+<!-- location_mapper/templates/location_mapper/location_list.html -->
+
+<h1>Locations</h1>
+<ul>
+{% for location in locations %}
+    <li><a href="{% url 'location_detail' location.custom_name %}">{{ location.custom_name }}</a></li>
+{% endfor %}
+</ul>

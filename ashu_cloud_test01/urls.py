@@ -15,11 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from index import views
+
 
 
 urlpatterns = [
-    path('chatbot/',include("chatbot.urls")),
     path('',include("index.urls")),
+    path('', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
+    path("register/", views.sign_up, name="sign-up"),
+    path('', include('location_mapper.urls')),
+
 
 ]

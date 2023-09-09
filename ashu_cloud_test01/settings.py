@@ -32,15 +32,21 @@ ALLOWED_HOSTS = ["16.171.122.96","ashu.cloud","*"]
 # Application definition
 
 INSTALLED_APPS = [
-    'chatbot.apps.ChatbotConfig',
     'index.apps.IndexConfig',
+    'location_mapper.apps.LocationMapperConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -78,7 +84,7 @@ WSGI_APPLICATION = 'ashu_cloud_test01.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME':'test_demo',
         'HOST':'127.0.0.1',
         'PORT':'3306',
@@ -131,3 +137,17 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AWS_ACCESS_KEY_ID = 'AKIAROPQ6LNS4XTOR7UB'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'media-ashu-cloud'
+AWS_S3_SIGNATURE_NAME = 's3v4',
+AWS_S3_REGION_NAME = 'eu-north-1'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL =  None
+AWS_S3_VERITY = True
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/login'

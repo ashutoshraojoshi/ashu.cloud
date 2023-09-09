@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<form method="POST">
+{% csrf_token %}{{form|crispy}}
+<p>Don't have a account create new one <a href="/register">Sign Up</a></p>
+<button type="submit" class="btn btn-success">Login</button>
+</form>
+{% endblock %}
