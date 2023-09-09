@@ -85,11 +85,11 @@ WSGI_APPLICATION = 'ashu_cloud_test01.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME':'test_demo',
-        'HOST':'127.0.0.1',
+        'NAME':'mydb2',
+        'HOST':'mydb2.cp8x2sonvqsb.eu-north-1.rds.amazonaws.com',
         'PORT':'3306',
-        'USER':'ashutosh',
-        'PASSWORD':'ashu12'
+        'USER':'admin',
+        'PASSWORD':'ashu1234'
     }
 }
 
